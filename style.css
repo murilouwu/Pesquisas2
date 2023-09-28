@@ -39,16 +39,28 @@ body{
 	overflow-x: hidden;
 }
 	.imgA{
-		background-position: center;
+		background-position: 63vw 49vh;
 		background-repeat: no-repeat;
+		background-image: url('imgs/coffe.png');
+		background-size: 80vh;
+		backdrop-filter: sepia(63%) saturate(85%) contrast(108%);
+		height: 100vh;
 	}
 	.imgB{
-		background-position: center;
+		background-position: 49vw 23vh;
 		background-repeat: no-repeat;
+		background-image: url('imgs/PC.png');
+		background-size: 137vh;
+		background-attachment: fixed;
+		backdrop-filter: saturate(58%) contrast(90%);
 	}
 	.imgC{
-		background-position: center;
+		background-position: 62vw 35vh;
 		background-repeat: no-repeat;
+		background-image: url('imgs/justice.png');
+		background-size: 86vh;
+		backdrop-filter: sepia(55%) saturate(42%) contrast(139%);
+		background-attachment: fixed;
 	}
 	.nota{
 		color: var(--corE);
