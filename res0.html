@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/39cab4bf95.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <title>Plano de teste de Software</title>
+    </head>
+    <body  class="imgB">
+        <a href="index.html" class="back" id="Btn">Voltar</a>
+        <input id="scrollBar" class="scrollBar" type="range" min="0" max="100" value="0">
+        <h1 class="title"><i class="fa-solid fa-desktop"></i>(TDD) Test Driven Development</h1>
+        <div class="Pes">
+            <h3 class="PesTopic">
+                <i class="fa-solid fa-square-poll-vertical"></i>Resumo introdutório
+            </h3>
+            <p class="PesPalagrafy">
+                O Test Driven Development (TDD) é uma metodologia de desenvolvimento de software que envolve a criação de testes automatizados antes da escrita do código de produção. Esse ciclo de desenvolvimento, que inclui a escrita do teste, a implementação do código e a refatoração, visa garantir a qualidade do software, documentar seu comportamento esperado e facilitar a manutenção contínua.
+            </p>
+            <h3 class="PesTopic">
+                <i class="fa-solid fa-person-praying"></i>Etapas
+            </h3>
+            <p class="PesPalagrafy">
+                Escrever um teste: Primeiro, você escreve um teste que descreve o comportamento desejado de uma parte do software. Este teste inicial geralmente falha porque o código de produção ainda não existe.
+                <br><br>
+                Escrever código de produção: Em seguida, você escreve o código de produção necessário para fazer o teste passar. O objetivo é escrever o mínimo de código necessário para que o teste seja bem-sucedido.
+                <br><br>
+                Refatorar: Depois que o teste passa, você pode refatorar o código para melhorar sua qualidade, mantendo o teste passando. Isso envolve fazer melhorias no código sem alterar o comportamento visível do software.
+                <br><br>
+            </p>
+            <h3 class="PesTopic">
+                <i class="fa-solid fa-location-pin"></i>Objetivo
+            </h3>
+            <p class="PesPalagrafy">
+                O principal objetivo do Test Driven Development (TDD) é melhorar a qualidade do software e a confiabilidade de suas funcionalidades, assegurando que o código produzido atenda aos requisitos definidos e continue funcionando conforme o esperado ao longo do tempo. Ao escrever testes antes da implementação, os desenvolvedores estabelecem um conjunto claro de expectativas para o comportamento do software, o que ajuda a evitar erros e bugs. Além disso, o TDD promove a documentação do comportamento desejado do software, facilitando a colaboração entre membros da equipe e a manutenção futura. Esse método também permite a detecção precoce de problemas, tornando o desenvolvimento mais eficiente e econômico, uma vez que os erros são identificados e corrigidos antes que se tornem mais complexos e custosos de resolver. Em resumo, o TDD visa criar software mais confiável, seguro e de alta qualidade, através da prática de escrever testes automatizados como parte integrante do processo de desenvolvimento.
+            </p>
+            <h3 class="PesTopic">
+                <i class="fa-solid fa-wrench"></i>Utilidade
+            </h3>
+            <p class="PesPalagrafy">
+                A utilidade da metodologia Test Driven Development (TDD) reside na sua capacidade de melhorar a qualidade do software e aumentar a confiabilidade das funcionalidades, ao mesmo tempo em que agiliza o processo de desenvolvimento. Ao enfatizar a criação de testes automatizados antes da escrita do código de produção, o TDD fornece um roteiro claro para o desenvolvimento, ajudando os desenvolvedores a definir e alcançar os requisitos desejados de forma precisa. Além disso, ele documenta o comportamento esperado do software, o que facilita a colaboração entre a equipe de desenvolvimento e a manutenção posterior. Uma das principais vantagens do TDD é a detecção precoce de erros, o que economiza tempo e recursos, pois problemas são identificados e corrigidos no início do processo de desenvolvimento, quando são mais simples e econômicos de resolver. Portanto, a utilidade do TDD está em sua capacidade de produzir software mais confiável, eficiente e de alta qualidade, promovendo a entrega de valor aos usuários finais.
+            </p>
+            <h3 class="PesTopic">
+                <i class="fa-solid fa-microscope"></i>Conclusão
+            </h3>
+            <p class="PesPalagrafy">
+                Em resumo, o Test Driven Development (TDD) é uma metodologia valiosa que visa melhorar a qualidade e a confiabilidade do software por meio da criação de testes automatizados antes da implementação do código de produção. Sua utilidade se manifesta na capacidade de definir claramente o comportamento esperado do software, facilitar a colaboração da equipe, detectar erros precocemente e economizar recursos ao longo do ciclo de desenvolvimento. O TDD, ao estabelecer um processo disciplinado e orientado por testes, promove a entrega de software mais confiável e de alta qualidade, contribuindo para a satisfação dos usuários finais e a eficiência geral do desenvolvimento de software.
+            </p>
+            <br><br><br><br>
+        </div>
+    </body>
+    <script type="text/javascript">
+        const scrollBar = document.querySelector('#scrollBar');
+
+        window.addEventListener('scroll', function() {
+          const scrollPosition = window.pageYOffset;
+          const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrollPercentage = (scrollPosition / documentHeight) * 100;
+
+          scrollBar.value = scrollPercentage;
+        });
+
+        scrollBar.addEventListener('input', function(){
+          const value = parseInt(scrollBar.value);
+          const maxH = window.innerHeight;
+          const scrollValue = (value / 100) * maxH;
+
+          scrol(scrollValue);
+        });
+
+        document.querySelector('body').addEventListener('keydown', (event)=>{
+        var KeyCode = event.keyCode || event.which;
+            if(KeyCode==37){
+                let btn = document.querySelector('#Btn');
+                btn.click();
+            }else if(KeyCode==50){
+                let page = "res1.html";
+                window.location.href = page;
+            }
+        });
+    </script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/39cab4bf95.js" crossorigin="anonymous"></script>
+        <title>Pesquisas</title>
+    </head>
+    <body class="imgA">
+        <p class="nota">Clique LeftArrow para voltar para essa pagina quando sair dela</p>
+        <h1 class="titleMain"><i class="fa-solid fa-mug-hot"></i>Pesquisas</h1>
+        <div class="mainOperation">
+            <a href="res0.html" id="btnA"><i class="fa-solid fa-desktop"></i>1- (TDD) Test Driven Development</a>
+            <a href="res1.html" id="btnB"><i class="fa-solid fa-gavel"></i>2- Lei Geral de Proteção de Dados Pessoais</a>
+        </div>
+    </body>
+    <script>
+        document.querySelector('body').addEventListener('keydown', (event)=>{
+        var KeyCode = event.keyCode || event.which;
+            if(KeyCode==49){
+                let btn = document.querySelector('#btnA');
+                btn.click();
+            }else if(KeyCode==50){
+                let btn = document.querySelector('#btnB');
+                btn.click();
+            }
+        });
+    </script>
+</html>
